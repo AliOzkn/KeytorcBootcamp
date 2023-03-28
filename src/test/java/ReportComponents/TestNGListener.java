@@ -9,7 +9,7 @@ public class TestNGListener extends GetScreenshot implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        log.info(context.getName() + " Web Automation Test Started.");
+        log.info(context.getName() + " TEST STARTED.");
     }
     @Override
     public void onTestStart(ITestResult result) {
@@ -34,6 +34,6 @@ public class TestNGListener extends GetScreenshot implements ITestListener {
     }
     @Override
     public void onFinish(ITestContext context) {
-        log.info(context.getName() + " FINISHED");
+        log.info(context.getName() + " TEST FINISHED");
     }
 }
