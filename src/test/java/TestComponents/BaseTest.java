@@ -4,10 +4,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pages.*;
 
+import static TestComponents.ConfigReader.properties;
 import static TestComponents.DriverSetup.driver;
-import static TestComponents.DriverSetup.properties;
+
 
 public class BaseTest {
+
     public Account account;
     public Search search;
     public Product product;

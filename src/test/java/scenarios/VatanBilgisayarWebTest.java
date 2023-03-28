@@ -1,8 +1,8 @@
 package scenarios;
 
 import TestComponents.BaseTest;
-import TestComponents.DriverSetup;
 import ReportComponents.TestNGListener;
+import TestComponents.ConfigReader;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import org.testng.annotations.Listeners;
@@ -25,15 +25,15 @@ public class VatanBilgisayarWebTest extends BaseTest {
     @Description("Login Test with correct e-mail and password.")
     void verifySuccessfulLogin() {
         account.goToLoginPage();
-        account.login(DriverSetup.properties.getProperty("email"),DriverSetup.properties.getProperty("password"));
+        account.login(ConfigReader.properties.getProperty("email"),ConfigReader.properties.getProperty("password"));
         assertEquals(account.accountText().toLowerCase(), "Hesabım".toLowerCase());
     }
 
     @Test(dependsOnMethods = "verifySuccessfulLogin")
     @Description("This test verifies the results consists with correct product name.")
     void verifySuccessfulProductSearch() {
-        search.searchProduct(DriverSetup.properties.getProperty("product"));
-        assertTrue(search.getResultText().toLowerCase().contains(DriverSetup.properties.getProperty("product").toLowerCase()));
+        search.searchProduct(ConfigReader.properties.getProperty("product"));
+        assertTrue(search.getResultText().toLowerCase().contains(ConfigReader.properties.getProperty("product").toLowerCase()));
     }
 
     @Test(dependsOnMethods = "verifySuccessfulProductSearch")

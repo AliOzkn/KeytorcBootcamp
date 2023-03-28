@@ -10,11 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
-import java.util.Properties;
 
 public class DriverSetup {
-
-    public static Properties properties;
     public static WebDriver driver;
 
     public static WebDriver initializeDriver(String browser) {
