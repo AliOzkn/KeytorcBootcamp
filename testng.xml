@@ -1,0 +1,7 @@
+<suite name="Test" >
+    <test name="Happy Path Test on vatanbilgisayar.com website" >
+        <classes>
+            <class name="scenarios.VatanBilgisayarWebTest"/>
+        </classes>
+    </test>
+</suite>
